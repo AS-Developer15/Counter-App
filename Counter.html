@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+
+  <style>
+    #mainDiv {
+      margin: 6%;
+      border: black dotted;
+      height: 500px;
+    }
+  </style>
+  <body>
+    <script>
+      // Global
+      let cntVal = document.getElementById("cntDisp");
+      let cntValInt = Number(0);
+      cntVal.innerHTML = cntValInt;
+
+      function decrement() {
+        cntValInt -= 1;
+        let cntVal = document.getElementById("cntDisp");
+        cntVal.innerHTML = cntValInt;
+      }
+      function reset() {
+        cntValInt = 0;
+        let cntVal = document.getElementById("cntDisp");
+        cntVal.innerHTML = cntValInt;
+      }
+      function increment() {
+        cntValInt += 1;
+        let cntVal = document.getElementById("cntDisp");
+        cntVal.innerHTML = cntValInt;
+      }
+    </script>
+    <center>
+      <div id="mainDiv">
+        <h1>Counter</h1>
+        <div class="cntrDisplay">
+          <h1 id="cntDisp">0</h1>
+        </div>
+
+        <div id="btnRow">
+          <button onclick="decrement()" id="dcrmnt">Decrease</button>
+
+          <button onclick="reset()" id="rst">Reset</button>
+
+          <button onclick="increment()" id="incrmnt">Increase</button>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
